@@ -120,7 +120,7 @@ This is a quick start script for compiling Runebase on  Ubuntu
     sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler qrencode
 
     git clone https://github.com/runebase/runebase-bitcore --recursive
-    cd runebase
+    cd runebase-bitcore
 
     # Note autogen will prompt to install some more dependencies if needed
     ./autogen.sh
