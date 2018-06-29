@@ -81,7 +81,7 @@ public:
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 525960000; // runebase halving every 4 years
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("0x00001b99adf3e2173f871c6c87399c1bc7ea31a60e8f0840482d89c57f6b1116");
+        consensus.BIP34Hash = uint256S("0x0000c5edbe6f9c21b0c77e568b8339dc5e8ffdf78fe14fd3b1a2ea51c7f710fd");
         consensus.BIP65Height = 0; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
         consensus.BIP66Height = 0; // 00000000000000000379eaa19dce8c9b722d46ae6a57c2f1a988119488b50931
         consensus.powLimit = uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -112,7 +112,7 @@ public:
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000"); // runebase
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x00001b99adf3e2173f871c6c87399c1bc7ea31a60e8f0840482d89c57f6b1116"); //453354
+        consensus.defaultAssumeValid = uint256S("0x0000c5edbe6f9c21b0c77e568b8339dc5e8ffdf78fe14fd3b1a2ea51c7f710fd"); //453354
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -126,9 +126,9 @@ public:
         nDefaultPort = 9947;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1530177938, 154444, 0x1f00ffff, 1, 100 * COIN);
+        genesis = CreateGenesisBlock(1530246365, 192857, 0x1f00ffff, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00001b99adf3e2173f871c6c87399c1bc7ea31a60e8f0840482d89c57f6b1116"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000c5edbe6f9c21b0c77e568b8339dc5e8ffdf78fe14fd3b1a2ea51c7f710fd"));
         assert(genesis.hashMerkleRoot == uint256S("0x888d6221b2a94c236c3b368dc9e212832ae59b55190cf2d0ed35feddb7afe5c3"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
@@ -153,7 +153,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("0x00001b99adf3e2173f871c6c87399c1bc7ea31a60e8f0840482d89c57f6b1116"))
+            ( 0, uint256S("0x0000c5edbe6f9c21b0c77e568b8339dc5e8ffdf78fe14fd3b1a2ea51c7f710fd"))
         };
 
         chainTxData = ChainTxData{
