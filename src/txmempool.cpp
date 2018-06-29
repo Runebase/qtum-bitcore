@@ -1015,7 +1015,7 @@ int CTxMemPool::Expire(int64_t time) {
     return stage.size();
 }
 
-/////////////////////////////////////////////////////// // qtum
+/////////////////////////////////////////////////////// // runebase
 void CTxMemPool::addAddressIndex(const CTxMemPoolEntry &entry, const CCoinsViewCache &view)
 {
     LOCK(cs);

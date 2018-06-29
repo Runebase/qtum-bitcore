@@ -32,7 +32,7 @@ class HelpMessageDialog;
 class ModalOverlay;
 class TitleBar;
 class NavigationBar;
-class QtumVersionChecker;
+class RunebaseVersionChecker;
 
 class CWallet;
 
@@ -138,7 +138,7 @@ private:
     RPCConsole *rpcConsole;
     HelpMessageDialog *helpMessageDialog;
     ModalOverlay *modalOverlay;
-    QtumVersionChecker *qtumVersionChecker;
+    RunebaseVersionChecker *runebaseVersionChecker;
     ModalOverlay *modalBackupOverlay;
 
     /** Keep track of previous number of blocks, to detect progress */

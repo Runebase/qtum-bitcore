@@ -11,8 +11,8 @@
 #include "utilstrencodings.h"
 
 #include <boost/foreach.hpp>
-#include <qtum/qtumstate.h>
-#include <qtum/qtumtransaction.h>
+#include <runebase/runebasestate.h>
+#include <runebase/runebasetransaction.h>
 #include <validation.h>
 
 using namespace std;
@@ -188,7 +188,7 @@ bool Solver(const CScript& scriptPubKey, txnouttype& typeRet, vector<vector<unsi
                 else
                     break;
             }
-            /////////////////////////////////////////////////////////// qtum
+            /////////////////////////////////////////////////////////// runebase
             else if (opcode2 == OP_VERSION)
             {
                 if(0 <= opcode1 && opcode1 <= OP_PUSHDATA4)
@@ -280,7 +280,7 @@ bool ExtractDestination(const COutPoint out, const CScript& script, CTxDestinati
     if (ExtractDestination(script, addressRet, typeRet))
         return true;
     if (*typeRet == TX_CREATE) {
-        addressRet = CKeyID(uint160(QtumState::createQtumAddress(uintToh256(out.hash), out.n).asBytes()));
+        addressRet = CKeyID(uint160(RunebaseState::createRunebaseAddress(uintToh256(out.hash), out.n).asBytes()));
         // std::cout << CBitcoinAddress(addressRet).ToString()<< " " << out.hash.GetHex() << " " << out.n << std::endl;
         return true;
     }
@@ -317,7 +317,7 @@ bool ExtractDestination(const CScript& scriptPubKey, CTxDestination& addressRet,
         addressRet = CScriptID(uint160(vSolutions[0]));
         return true;
     }
-    /////////////////////////////////////////////////////////////// // qtum
+    /////////////////////////////////////////////////////////////// // runebase
     else if(whichType == TX_CALL){
         addressRet = CKeyID(uint160(vSolutions[0]));
         return true;

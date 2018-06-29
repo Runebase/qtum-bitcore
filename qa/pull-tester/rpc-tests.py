@@ -76,7 +76,7 @@ for arg in sys.argv[1:]:
 
 #Set env vars
 if "BITCOIND" not in os.environ:
-    os.environ["BITCOIND"] = BUILDDIR + '/src/qtumd' + EXEEXT
+    os.environ["BITCOIND"] = BUILDDIR + '/src/runebased' + EXEEXT
 
 if EXEEXT == ".exe" and "-win" not in opts:
     # https://github.com/bitcoin/bitcoin/commit/d52802551752140cf41f0d9a225a43e84404d3e9
@@ -159,37 +159,37 @@ testScripts = [
     'listsinceblock.py',
     'p2p-leaktests.py',
 
-    #qtum
-    'qtum-8mb-block.py',
-    'qtum-dgp-gas-price-lingering-mempool-tx.py',
-    'qtum-opcreate.py',
-    'qtum-block-header.py',
-    'qtum-dgp.py',
-    'qtum-pos.py',
-    'qtum-callcontract.py',
-    'qtum-gas-limit.py',
-    'qtum-pos-segwit.py',
-    'qtum-combined-outputs-exceed-gas-limit.py',
-    'qtum-globals-state-changer.py',
-    'qtum-sendtocontract.py',
-    'qtum-condensing-txs.py',
-    'qtum-identical-refunds.py',
-    'qtum-soft-block-gas-limits.py',
-    'qtum-createcontract.py',
-    'qtum-many-value-refunds-from-same-tx.py',
-    'qtum-spend-op-call.py',
-    'qtum-create-eth-op-code.py',
-    'qtum-no-exec-call-disabled.py',
-    'qtum-state-root.py',
-    'qtum-dgp-block-size-restart.py',
-    'qtum-null-sender.py',
-    'qtum-transaction-prioritization.py',
-    'qtum-dgp-block-size-sync.py',
-    'qtum-opcall.py',
-    'qtum-assign-mpos-fees-to-gas-refund.py',
-    'qtum-gas-limit-overflow.py',
-    'qtum-immature-coinstake-spend.py',
-    'qtum-ignore-mpos-participant-reward.py',
+    #runebase
+    'runebase-8mb-block.py',
+    'runebase-dgp-gas-price-lingering-mempool-tx.py',
+    'runebase-opcreate.py',
+    'runebase-block-header.py',
+    'runebase-dgp.py',
+    'runebase-pos.py',
+    'runebase-callcontract.py',
+    'runebase-gas-limit.py',
+    'runebase-pos-segwit.py',
+    'runebase-combined-outputs-exceed-gas-limit.py',
+    'runebase-globals-state-changer.py',
+    'runebase-sendtocontract.py',
+    'runebase-condensing-txs.py',
+    'runebase-identical-refunds.py',
+    'runebase-soft-block-gas-limits.py',
+    'runebase-createcontract.py',
+    'runebase-many-value-refunds-from-same-tx.py',
+    'runebase-spend-op-call.py',
+    'runebase-create-eth-op-code.py',
+    'runebase-no-exec-call-disabled.py',
+    'runebase-state-root.py',
+    'runebase-dgp-block-size-restart.py',
+    'runebase-null-sender.py',
+    'runebase-transaction-prioritization.py',
+    'runebase-dgp-block-size-sync.py',
+    'runebase-opcall.py',
+    'runebase-assign-mpos-fees-to-gas-refund.py',
+    'runebase-gas-limit-overflow.py',
+    'runebase-immature-coinstake-spend.py',
+    'runebase-ignore-mpos-participant-reward.py',
 ]
 
 
