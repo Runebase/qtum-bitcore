@@ -81,7 +81,7 @@ public:
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 525960000; // runebase halving every 4 years
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("0x000081085ee72dee58bdb72c85b50c0dae43fab0dac23bacb08741df969eb033");
+        consensus.BIP34Hash = uint256S("0x0000c5edbe6f9c21b0c77e568b8339dc5e8ffdf78fe14fd3b1a2ea51c7f710fd");
         consensus.BIP65Height = 0; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
         consensus.BIP66Height = 0; // 00000000000000000379eaa19dce8c9b722d46ae6a57c2f1a988119488b50931
         consensus.powLimit = uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -112,7 +112,7 @@ public:
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000"); // runebase
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x000081085ee72dee58bdb72c85b50c0dae43fab0dac23bacb08741df969eb033"); //453354
+        consensus.defaultAssumeValid = uint256S("0x0000c5edbe6f9c21b0c77e568b8339dc5e8ffdf78fe14fd3b1a2ea51c7f710fd"); //453354
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -126,9 +126,9 @@ public:
         nDefaultPort = 9947;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1530356587, 202295, 0x1f00ffff, 1, 100 * COIN);
+        genesis = CreateGenesisBlock(1530246365, 192857, 0x1f00ffff, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000081085ee72dee58bdb72c85b50c0dae43fab0dac23bacb08741df969eb033"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000c5edbe6f9c21b0c77e568b8339dc5e8ffdf78fe14fd3b1a2ea51c7f710fd"));
         assert(genesis.hashMerkleRoot == uint256S("0x888d6221b2a94c236c3b368dc9e212832ae59b55190cf2d0ed35feddb7afe5c3"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
@@ -153,7 +153,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("0x000081085ee72dee58bdb72c85b50c0dae43fab0dac23bacb08741df969eb033"))
+            ( 0, uint256S("0x0000c5edbe6f9c21b0c77e568b8339dc5e8ffdf78fe14fd3b1a2ea51c7f710fd"))
         };
 
         chainTxData = ChainTxData{
@@ -183,7 +183,7 @@ public:
         strNetworkID = "test";
         consensus.nSubsidyHalvingInterval = 525960000; // runebase halving every 4 years
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("0x000017137231190196fd50970e61ffb338e1df6f005188ed623756648853a2db");
+        consensus.BIP34Hash = uint256S("0x00001c1c4c03ce2958600754ab7b20b5d0aef52c9472a7942a49175c0aa6268b");
         consensus.BIP65Height = 0; // 00000000007f6655f22f98e72ed80d8b06dc761d5da09df0fa1dc4be4f861eb6
         consensus.BIP66Height = 0; // 000000002104c8c45e99a8853285a3b592602a3ccde2b832481da85e9e4ba182
         consensus.powLimit = uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -214,7 +214,7 @@ public:
         consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000"); // runebase
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x000017137231190196fd50970e61ffb338e1df6f005188ed623756648853a2db"); //1079274
+        consensus.defaultAssumeValid = uint256S("0x00001c1c4c03ce2958600754ab7b20b5d0aef52c9472a7942a49175c0aa6268b"); //1079274
 
         pchMessageStart[0] = 0xac;
         pchMessageStart[1] = 0xb2;
@@ -223,9 +223,9 @@ public:
         nDefaultPort = 19947;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1530356661, 79472, 0x1f00ffff, 1, 100 * COIN);
+        genesis = CreateGenesisBlock(1529488943, 13021, 0x1f00ffff, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000017137231190196fd50970e61ffb338e1df6f005188ed623756648853a2db"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00001c1c4c03ce2958600754ab7b20b5d0aef52c9472a7942a49175c0aa6268b"));
         assert(genesis.hashMerkleRoot == uint256S("0x888d6221b2a94c236c3b368dc9e212832ae59b55190cf2d0ed35feddb7afe5c3"));
 
         vFixedSeeds.clear();
@@ -250,7 +250,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("0x000017137231190196fd50970e61ffb338e1df6f005188ed623756648853a2db"))
+            ( 0, uint256S("0x00001c1c4c03ce2958600754ab7b20b5d0aef52c9472a7942a49175c0aa6268b"))
         };
 
         chainTxData = ChainTxData{
@@ -280,7 +280,7 @@ public:
         strNetworkID = "regtest";
         consensus.nSubsidyHalvingInterval = 525960000;
         consensus.BIP34Height = 0; // BIP34 has not activated on regtest (far in the future so block v1 are not rejected in tests) // activate for runebase
-        consensus.BIP34Hash = uint256S("0x2f7c5e83250cb023e76eee793215d4436e096725b4ff26c737552d1b2a03de6b");
+        consensus.BIP34Hash = uint256S("0x665ed5b402ac0b44efc37d8926332994363e8a7278b7ee9a58fb972efadae943");
         consensus.BIP65Height = 0; // BIP65 activated on regtest (Used in rpc activation tests)
         consensus.BIP66Height = 0; // BIP66 activated on regtest (Used in rpc activation tests)
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -315,9 +315,9 @@ public:
         nDefaultPort = 29947;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1530356720, 1, 0x207fffff, 1, 100 * COIN);
+        genesis = CreateGenesisBlock(1529489027, 0, 0x207fffff, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x2f7c5e83250cb023e76eee793215d4436e096725b4ff26c737552d1b2a03de6b"));
+        assert(consensus.hashGenesisBlock == uint256S("0x665ed5b402ac0b44efc37d8926332994363e8a7278b7ee9a58fb972efadae943"));
         assert(genesis.hashMerkleRoot == uint256S("0x888d6221b2a94c236c3b368dc9e212832ae59b55190cf2d0ed35feddb7afe5c3"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
@@ -330,7 +330,7 @@ public:
 
         checkpointData = (CCheckpointData){
             boost::assign::map_list_of
-            ( 0, uint256S("0x2f7c5e83250cb023e76eee793215d4436e096725b4ff26c737552d1b2a03de6b"))
+            ( 0, uint256S("0x665ed5b402ac0b44efc37d8926332994363e8a7278b7ee9a58fb972efadae943"))
         };
 
         chainTxData = ChainTxData{
