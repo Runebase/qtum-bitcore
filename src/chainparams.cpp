@@ -348,11 +348,11 @@ public:
 
         consensus.nFixUTXOCacheHFHeight=0;
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,113);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,123);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,202);
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x05)(0x39)(0x81)(0xab).convert_to_container<std::vector<unsigned char> >();
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x05)(0x39)(0x85)(0x2c).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,11);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,106);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,229);
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x05)(0x37)(0x82)(0xbf).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x05)(0x37)(0x84)(0xa4).convert_to_container<std::vector<unsigned char> >();
     }
 
     void UpdateBIP9Parameters(Consensus::DeploymentPos d, int64_t nStartTime, int64_t nTimeout)
